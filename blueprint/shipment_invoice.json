@@ -1,0 +1,106 @@
+{
+    "name": "shipment_invoice",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "shipment_invoice_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "shipment_invoice"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "discount": {
+            "name": "discount",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "pay_date": {
+            "name": "pay_date",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "payment_method_id": {
+            "name": "payment_method_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "payment_type_id": {
+            "name": "payment_type_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "price": {
+            "name": "price",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_id": {
+            "name": "shipment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "shipment_invoice_id": {
+            "name": "shipment_invoice_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "status": {
+            "name": "status",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "total_price": {
+            "name": "total_price",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "vat": {
+            "name": "vat",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        }
+    }
+}

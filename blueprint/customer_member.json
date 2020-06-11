@@ -1,0 +1,58 @@
+{
+    "name": "customer_member",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "customer_id",
+        "member_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "customer_member"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "customer_id": {
+            "name": "customer_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "member_id": {
+            "name": "member_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "permission": {
+            "name": "permission",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

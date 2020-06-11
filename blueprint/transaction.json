@@ -1,0 +1,92 @@
+{
+    "name": "transaction",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "transaction_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "transaction"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "carrier_id": {
+            "name": "carrier_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "customer_id": {
+            "name": "customer_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "payment_method": {
+            "name": "payment_method",
+            "type": "int",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "payment_status": {
+            "name": "payment_status",
+            "type": "int",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "payment_type": {
+            "name": "payment_type",
+            "type": "int",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_id": {
+            "name": "shipment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "total_price": {
+            "name": "total_price",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "transaction_id": {
+            "name": "transaction_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "transaction_type": {
+            "name": "transaction_type",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        }
+    }
+}

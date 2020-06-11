@@ -1,0 +1,43 @@
+{
+    "name": "site_setting",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "site_setting_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "site_setting"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "setting_key": {
+            "name": "setting_key",
+            "type": "varchar",
+            "nullable": "YES",
+            "key": "",
+            "default": ""
+        },
+        "setting_value": {
+            "name": "setting_value",
+            "type": "varchar",
+            "nullable": "YES",
+            "key": "",
+            "default": ""
+        },
+        "site_setting_id": {
+            "name": "site_setting_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        }
+    }
+}

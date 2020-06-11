@@ -1,0 +1,9 @@
+
+// {{MODULE_NAME}} Create
+	t.Log("Test {{MODULE_NAME}} Create") 
+	{{MODULE_NAME}}CreateStruct := mockmodels.{{MODULE_NAME}}MockForm{}
+	{{MODULE_NAME}}CreateStruct.GenFake() 
+	e.POST("/api/{{MODULE_ROUTE}}").
+		{{FORM_FIELD}} 
+		WithHeader("Authorization", "Bearer "+TokenString).
+		Expect().Status(200)

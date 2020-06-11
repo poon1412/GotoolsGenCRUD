@@ -1,0 +1,36 @@
+
+// Delete
+
+{{OPEN_INJECT}}
+type {{MODULE_NAME}}Delete struct {
+	{{CTRL_DOT}}Response
+	Model models.{{MODULE_NAME}}Form     `json:"-"`
+	Param models.{{MODULE_NAME}}Form `json:"-"`
+	Dt    map[string]interface{} `json:"data,omitempty"`
+}
+
+type {{MODULE_NAME}}DeleteParam struct{}
+
+func {{MODULE_NAME}}DeleteHandler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}Delete{}
+	Obj.Response.Prepare(ctx, &Obj)
+	ctx.JSON(Obj)
+}
+
+func (Obj *{{MODULE_NAME}}Delete) BeforeValidate(ctx iris.Context) {}
+
+func (Obj *{{MODULE_NAME}}Delete) Prepare(ctx iris.Context) {
+	
+	{{KEY_INIT}}
+
+	{{KEY_PARAM}}
+
+	if Obj.Model.Delete() {
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("Error")
+	}
+}
+{{END_INJECT}}

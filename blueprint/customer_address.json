@@ -1,0 +1,92 @@
+{
+    "name": "customer_address",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "customer_address_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "customer_address"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "address": {
+            "name": "address",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "customer_address_id": {
+            "name": "customer_address_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "customer_id": {
+            "name": "customer_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "district": {
+            "name": "district",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "geo_address": {
+            "name": "geo_address",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "geo_lat": {
+            "name": "geo_lat",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "geo_lng": {
+            "name": "geo_lng",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "province": {
+            "name": "province",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

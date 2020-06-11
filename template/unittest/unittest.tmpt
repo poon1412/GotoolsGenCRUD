@@ -1,0 +1,13 @@
+package unittest
+
+import (
+	"fmt"
+	"github.com/kataras/iris/httptest"
+	"mock/mockmodels"
+	"testing"
+)
+
+func Test{{MODULE_NAME}}(t *testing.T) {
+	e := httptest.New(t, App)  
+	{{UNITTEST}}
+}

@@ -1,0 +1,1 @@
+		apiRoute.Get("/{{MODULE_ROUTE}}", {{MODE}}.{{MODULE_NAME}}ListHandler)

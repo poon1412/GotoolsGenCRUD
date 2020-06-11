@@ -1,0 +1,49 @@
+
+
+// Media
+type {{MODULE_NAME}} struct {
+	Response
+	Param models.{{MODULE_NAME}}Form `json:"data"`
+}
+
+func {{MODULE_NAME}}Handler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}{}
+	Obj.Response.Prepare(ctx, &Obj)
+	ctx.JSON(Obj)
+}
+
+func (Obj *{{MODULE_NAME}}) BeforeValidate(ctx iris.Context) {
+	Obj.Response.Param = &Obj.Param
+}
+
+func (Obj *{{MODULE_NAME}}) Prepare(ctx iris.Context) {
+
+	var fileOk bool
+	var fileInfo map[string][]string
+	var fileData []byte
+
+	if fileInfo, fileData, fileOk = Obj.Response.FormFile(ctx, "file"); !fileOk {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+		return
+	}
+
+	dateNow := time.Now()
+	Obj.Param.ContentType = fileInfo["type"][0]
+	Obj.Param.FileSize, _ = strconv.Atoi(fileInfo["length"][0])
+	Obj.Param.OriginalName = fileInfo["name"][0]
+	Obj.Param.UploadType = "TEMP"
+	Obj.Param.UploadDate = dateNow
+	Obj.Param.State = "publish"
+	Obj.Param.Data = fileData
+	Obj.Param.Uuname = randSeq(10)
+	Obj.Param.TempName = randSeq(10)
+
+	if models.Create{{MODULE_NAME}}(&Obj.Param) {
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+	}
+}

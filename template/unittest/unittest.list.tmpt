@@ -1,0 +1,4 @@
+  
+// {{MODULE_NAME}} List
+  t.Log("Test {{MODULE_NAME}} List") 
+  e.GET("/api/{{MODULE_ROUTE}}").WithHeader("Authorization", "Bearer "+TokenString).Expect().Status(200)

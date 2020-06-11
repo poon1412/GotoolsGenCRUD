@@ -1,0 +1,85 @@
+hash: ff4301634d499e100f0940324a9fdbb21ac3b897141a130ac639695c8798a1bc
+updated: 2018-09-04T15:06:54.825136+07:00
+imports:
+- name: github.com/bmatcuk/doublestar
+  version: 85a78806aa1b4707d1dbace9be592cf1ece91ab3
+- name: github.com/codegangsta/cli
+  version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
+- name: github.com/droundy/goopt
+  version: 0b8effe182da161d81b011aba271507324ecb7ab
+- name: github.com/go-sql-driver/mysql
+  version: 99ff426eb706cffe92ff3d058e168b278cabf7c7
+- name: github.com/howeyc/gopass
+  version: bf9dde6d0d2c004a008c27aaee91170c786f6db8
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/jinzhu/gorm
+  version: 32455088f24d6b1e9a502fb8e40fdc16139dbea8
+  subpackages:
+  - dialects/mysql
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
+- name: github.com/joho/godotenv
+  version: 1709ab122c988931ad53508747b3c061400c2984
+- name: github.com/Masterminds/glide
+  version: 3e13fd16ed5b0808ba0fb2e4bd98eb325ccde0a1
+  subpackages:
+  - action
+  - cache
+  - cfg
+  - dependency
+  - gb
+  - godep
+  - godep/strip
+  - gom
+  - gpm
+  - importer
+  - mirrors
+  - msg
+  - path
+  - repo
+  - tree
+  - util
+- name: github.com/Masterminds/semver
+  version: c7af12943936e8c39859482e61f0574c2fd7fc75
+- name: github.com/Masterminds/vcs
+  version: 6f1c6d150500e452704e9863f68c2559f58616bf
+- name: github.com/mitchellh/go-homedir
+  version: ae18d6b8b3205b561c79e8e5f69bff09736185f4
+- name: github.com/spf13/cobra
+  version: 99dc123558852f67743bd0b2caf8383cb3c6d720
+- name: github.com/spf13/pflag
+  version: 298182f68c66c05229eb03ac171abe6e309ee79a
+- name: golang.org/x/crypto
+  version: 182538f80094b6a8efaade63a8fd8e0d9d5843dd
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: 2b024373dcd9800f0cae693839fac6ede8d64a8c
+  subpackages:
+  - unix
+  - windows
+- name: google.golang.org/appengine
+  version: 03cac3b07182cfb08c0d0c0b6ee72a1ceb151c92
+  subpackages:
+  - cloudsql
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports:
+- name: github.com/gopherjs/gopherjs
+  version: 0210a2f0f73c96103378b0b935f39868e5731809
+  subpackages:
+  - js
+- name: github.com/jtolds/gls
+  version: 77f18212c9c7edc9bd6a33d383a7b545ce62f064
+- name: github.com/smartystreets/assertions
+  version: 7c9eb446e3cf06e83049467a5f25c38730ce7034
+  subpackages:
+  - internal/go-render/render
+  - internal/oglematchers
+- name: github.com/smartystreets/goconvey
+  version: ef6db91d284a0e7badaa1f0c404c30aa7dee3aed
+  subpackages:
+  - convey
+  - convey/gotest
+  - convey/reporting

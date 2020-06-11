@@ -1,0 +1,4 @@
+
+// {{MODULE_NAME}} Detail
+	t.Log("Test {{MODULE_NAME}} Detail") 
+	e.GET(fmt.Sprintf("/api/{{MODULE_ROUTE}}{{ROUTE_URL_KEY}}"{{ROUTE_URL_VALUE}})).WithHeader("Authorization", "Bearer "+TokenString).Expect().Status(200)

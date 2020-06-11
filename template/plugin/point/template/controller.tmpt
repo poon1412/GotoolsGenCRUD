@@ -1,0 +1,44 @@
+package point
+
+import (
+	"github.com/kataras/iris"
+	"server/api/controllers"
+	"server/api/models"
+)
+
+// Addpoint
+ 
+type {{MODULE_NAME}}AddPoint struct {
+	controllers.Response
+	Model models.{{MODULE_NAME}}     `json:"-"`
+	Param {{MODULE_NAME}}AddPointParam `json:"-"`
+	Dt    models.{{MODULE_NAME}}       `json:"data"`
+}
+
+type {{MODULE_NAME}}AddPointParam struct{
+	{{KEY_PARAM_STRUCT}} 
+}
+
+func {{MODULE_NAME}}AddPointHandler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}AddPoint{}
+	Obj.Response.Prepare(ctx, &Obj)
+	ctx.JSON(Obj)
+}
+
+func (Obj *{{MODULE_NAME}}AddPoint) BeforeValidate(ctx iris.Context) {
+	{{KEY_INIT}} 
+}
+
+func (Obj *{{MODULE_NAME}}AddPoint) Prepare(ctx iris.Context) { 
+	 
+	{{KEY_PARAM}} 
+	
+	if Obj.Model.AddPoint() {
+		Obj.Dt = Obj.Model
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+	}
+} 

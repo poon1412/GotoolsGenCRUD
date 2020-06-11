@@ -1,0 +1,9 @@
+package models
+
+import ( 
+	"server/middleware/database"
+	{{IMPORT_ADDITION}}
+)
+
+{{DATA_MODELS}}
+ 

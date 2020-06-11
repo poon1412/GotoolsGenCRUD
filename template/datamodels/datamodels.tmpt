@@ -1,0 +1,19 @@
+
+type {{MODULE_NAME}} struct {
+{{DATA_FIELD}}
+}
+
+type {{MODULE_NAME}}Form struct {
+{{DATA_FORM}}
+}
+
+
+func (obj *{{MODULE_NAME}}) TableName() string {
+	return "{{TABLE_NAME}}"
+}
+
+func (obj *{{MODULE_NAME}}Form) TableName() string {
+	return "{{TABLE_NAME}}"
+}
+
+

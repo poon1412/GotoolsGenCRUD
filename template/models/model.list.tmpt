@@ -1,0 +1,19 @@
+
+
+func (obj *{{MODULE_NAME}}) List({{FILTER_PARAM}} sortCmd string, offset int, limit int) ([]{{MODULE_NAME}}, int) {
+	var rowCount int
+	var objDt []{{MODULE_NAME}}
+	dbCnn := database.DBCon
+
+	{{FILTER_INIT}}
+	
+	if len(sortCmd) > 0 {
+		dbCnn = dbCnn.Order(sortCmd)
+	}
+
+	if err := dbCnn.Limit(limit).Offset(offset).Find(&objDt).Offset(0).Count(&rowCount).Error; err != nil {
+		panic(err)
+	}
+	return objDt, rowCount
+}
+

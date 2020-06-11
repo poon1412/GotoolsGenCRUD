@@ -1,0 +1,44 @@
+
+// List
+ 
+{{OPEN_INJECT}}
+type {{MODULE_NAME}}List struct {
+	{{CTRL_DOT}}Response
+	Model models.{{MODULE_NAME}}   `json:"-"`
+	Param {{MODULE_NAME}}ListParam `json:"-"`
+	Dt    []models.{{MODULE_NAME}}   `json:"data"`
+}
+
+type {{MODULE_NAME}}ListParam struct {
+	{{FILTER_PARAM_STRUCT}}
+	Sort        string `json:"sort" form:"sort" validate:"sql-order"`
+	Offset int    `json:"offset" form:"offset" validate:"min=0"`
+	Limit int    `json:"limit" form:"limit" validate:"min=1"`
+}
+
+func {{MODULE_NAME}}ListHandler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}List{}
+	Obj.Response.Prepare(ctx, &Obj) 
+	{{CACHE_FRONTEND}}
+	ctx.JSON(Obj)
+} 
+
+func (Obj *{{MODULE_NAME}}List) BeforeValidate(ctx iris.Context) {
+	Obj.Param.Offset = 0
+	Obj.Param.Limit = 10
+	{{FILTER_DEFAULT}} 
+}
+
+func (Obj *{{MODULE_NAME}}List) Prepare(ctx iris.Context) {
+	allowField := []string{ {{ALLOW_ORDER}} }
+	Obj.Param.Sort = {{CTRL_DOT}}ConvertUrlSort(allowField, Obj.Param.Sort)
+	Obj.Dt, Obj.Response.CountRow = Obj.Model.List({{FILTER_PARAM}}Obj.Param.Sort, Obj.Param.Offset, Obj.Param.Limit)
+	if len(Obj.Dt) > 0 {
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+	}
+}
+{{END_INJECT}}

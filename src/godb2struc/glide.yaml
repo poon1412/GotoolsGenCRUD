@@ -1,0 +1,6 @@
+package: tool
+import:
+- package: github.com/Shelnutt2/db2struct
+- package: github.com/jinzhu/gorm
+  subpackages:
+  - dialects/mysql

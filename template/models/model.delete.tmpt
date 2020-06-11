@@ -1,0 +1,13 @@
+
+func (obj *{{MODULE_NAME}}Form) Delete() bool {
+	qryObj := {{MODULE_NAME}}Form{}
+	dbCnn := database.DBCon
+
+	{{FILTER_INIT}} 
+	
+	if err := dbCnn.Delete(&qryObj).Error; err != nil {
+		panic(err)
+		return false
+	}
+	return true
+}

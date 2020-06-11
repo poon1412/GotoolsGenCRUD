@@ -1,0 +1,19 @@
+{
+	"version": "1.0",
+	"name": "point",
+	"schema": [
+		{ 
+			"provider": "mysql",
+			"action":"add_field",
+			"columns":{
+				"point": {
+					"name": "{m}_point",
+					"type": "int",
+		            "nullable": "YES",
+		            "key": "",
+		            "default": ""
+				}  
+			}
+		}
+	]
+}

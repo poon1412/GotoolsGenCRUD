@@ -1,0 +1,9 @@
+ 
+func (obj *{{MODULE_NAME}}Form) Create() bool {
+	dbCnn := database.DBCon
+	if err := dbCnn.Create(obj).Error; err != nil {
+		panic(err)
+		return false
+	}
+	return true
+}

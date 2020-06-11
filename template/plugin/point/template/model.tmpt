@@ -1,0 +1,22 @@
+ 
+
+func (obj *{{MODULE_NAME}}Form) AddPoint() bool {
+	qryObj := {{MODULE_NAME}}Form{}
+	dbCnn := database.DBCon
+
+	{{FILTER_INIT}} 
+
+	if err := dbCnn.First(&qryObj).Error; err != nil {
+		return false
+		panic(err)
+	}
+
+	qryObj.{{COLUMN_Point}}++
+
+	if err := dbCnn.Save(&Obj).Error; err != nil {
+		panic(err)
+	}
+ 
+	*obj = qryObj
+	return true
+}

@@ -1,0 +1,18 @@
+hash: 4dcc0daf6c5374b11c20ea39b8169af57129964de62a457aca3c520d7451e004
+updated: 2018-06-07T15:26:28.338357197+07:00
+imports:
+- name: github.com/go-sql-driver/mysql
+  version: d523deb1b23d913de5bdada721a6071e71283618
+- name: github.com/jinzhu/gorm
+  version: 82eb9f8a5bbb5e6b929d2f0ae5b934e6a253f94e
+  subpackages:
+  - dialects/mysql
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
+- name: github.com/Shelnutt2/db2struct
+  version: c2b8c916853abba212f921e242afcaa65ebf57b5
+- name: google.golang.org/appengine
+  version: b1f26356af11148e710935ed1ac8a7f5702c7612
+  subpackages:
+  - cloudsql
+testImports: []

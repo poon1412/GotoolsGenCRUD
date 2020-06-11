@@ -1,0 +1,1 @@
+		apiRoute.Get("/{{MODULE_ROUTE}}{{ROUTE_URL_KEY}}", {{MODE}}.{{MODULE_NAME}}DetailHandler)

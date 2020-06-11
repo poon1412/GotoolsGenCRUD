@@ -1,0 +1,131 @@
+{
+    "name": "carrier",
+    "mode": "LR",
+    "injection_mode": "L",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "carrier_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "carrier"
+    ],
+    "cache_duration": 0,
+    "plugin": {
+        "point": {
+            "config": "asuf"
+        }
+    },
+    "relation": {},
+    "columns": {
+        "carrier_id": {
+            "name": "carrier_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "company_address": {
+            "name": "company_address",
+            "type": "text",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "company_name": {
+            "name": "company_name",
+            "type": "varchar",
+            "nullable": "YES",
+            "key": "",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "email": {
+            "name": "email",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "first_name": {
+            "name": "first_name",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "last_name": {
+            "name": "last_name",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "password": {
+            "name": "password",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "personal_id": {
+            "name": "personal_id",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "personal_type": {
+            "name": "personal_type",
+            "type": "tinyint",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_method": {
+            "name": "shipment_method",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "tel": {
+            "name": "tel",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "transport_function": {
+            "name": "transport_function",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "zone": {
+            "name": "zone",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": "asdf"
+        }
+    }
+}

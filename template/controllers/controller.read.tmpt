@@ -1,0 +1,43 @@
+
+// Read
+{{OPEN_INJECT}}
+type {{MODULE_NAME}}Detail struct {
+	{{CTRL_DOT}}Response
+	Model models.{{MODULE_NAME}}     `json:"-"`
+	Param {{MODULE_NAME}}DetailParam `json:"-"`
+	Dt    models.{{MODULE_NAME}}       `json:"data"`
+}
+
+type {{MODULE_NAME}}DetailParam struct{
+	{{KEY_PARAM_STRUCT}}
+	{{FILTER_PARAM_STRUCT}}
+}
+
+func {{MODULE_NAME}}DetailHandler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}Detail{}
+	Obj.Response.Prepare(ctx, &Obj)
+	{{CACHE_FRONTEND}}
+	ctx.JSON(Obj)
+}
+
+func (Obj *{{MODULE_NAME}}Detail) BeforeValidate(ctx iris.Context) {
+	{{KEY_INIT}}
+	{{FILTER_DEFAULT}}
+}
+
+func (Obj *{{MODULE_NAME}}Detail) Prepare(ctx iris.Context) { 
+	
+	{{FILTER_PARAM}}
+	{{KEY_PARAM}} 
+	
+	if Obj.Model.Once() {
+		Obj.Dt = Obj.Model
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+	}
+}
+
+{{END_INJECT}}

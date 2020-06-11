@@ -1,0 +1,1 @@
+		apiRoute.Put("/{{MODULE_ROUTE}}{{ROUTE_UNIQ_KEY}}/addpoint", point.{{MODULE_NAME}}AddPointHandler)

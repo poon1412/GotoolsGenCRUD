@@ -1,0 +1,64 @@
+{
+    "name": "carrier_payment",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "carrier_payment_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "carrier_payment"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "carrier_id": {
+            "name": "carrier_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "carrier_payment_id": {
+            "name": "carrier_payment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "payment_account_number": {
+            "name": "payment_account_number",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "payment_method_id": {
+            "name": "payment_method_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

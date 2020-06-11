@@ -1,0 +1,35 @@
+package unittest
+
+import (
+	"fmt"
+	"github.com/dgrijalva/jwt-go"
+	"github.com/kataras/iris/httptest"
+	"server/api"
+	"server/bootstrap"
+	"server/middleware/authen"
+	"server/utils"
+	"testing"
+)
+
+var App = bootstrap.NewApp()
+var TokenString = ""
+var DateTime = utils.DateTime{}
+
+func TestApi(t *testing.T) {
+	e := httptest.New(t, App)
+
+	if api.Server.AuthenEnable {
+		t.Log("Get JWT")
+		e.GET("/api/getToken").Expect().Status(httptest.StatusOK)
+		claims := make(jwt.MapClaims)
+		claims["UID"] = "0"
+		TokenString = authen.GenerateToken(claims)
+	}
+
+	DateTime.Init()
+	DateTime.DateFormatOut = "2006-01-02T15:04:05Z"
+
+	fmt.Println("Start Unitest")
+	e.GET("/api/test").WithHeader("Authorization", "Bearer "+TokenString).Expect().Status(404)
+
+}

@@ -1,0 +1,17 @@
+
+func (obj *{{MODULE_NAME}}) Once() bool {
+	qryObj := {{MODULE_NAME}}{}
+	dbCnn := database.DBCon
+
+	{{PRELOAD}}
+
+	{{FILTER_INIT}} 
+
+	if err := dbCnn.First(&qryObj).Error; err != nil {
+		return false
+		panic(err)
+	} 
+
+	*obj = qryObj
+	return true
+}

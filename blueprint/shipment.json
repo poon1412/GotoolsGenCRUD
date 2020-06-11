@@ -1,0 +1,176 @@
+{
+    "name": "shipment",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "shipment_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "shipment"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "carrier_id": {
+            "name": "carrier_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "contact_no_ship": {
+            "name": "contact_no_ship",
+            "type": "int",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_period_from": {
+            "name": "contact_period_from",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_period_to": {
+            "name": "contact_period_to",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_repeat_mode": {
+            "name": "contact_repeat_mode",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_schedule_type": {
+            "name": "contact_schedule_type",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_schedule_val": {
+            "name": "contact_schedule_val",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_time": {
+            "name": "contact_time",
+            "type": "time",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "contact_type_id": {
+            "name": "contact_type_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "contact_weight_per_ship": {
+            "name": "contact_weight_per_ship",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "customer_id": {
+            "name": "customer_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "delivery_address": {
+            "name": "delivery_address",
+            "type": "text",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "pickup_address": {
+            "name": "pickup_address",
+            "type": "text",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "price": {
+            "name": "price",
+            "type": "double",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_category_id": {
+            "name": "shipment_category_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "shipment_id": {
+            "name": "shipment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "shipment_method_id": {
+            "name": "shipment_method_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "shipment_no": {
+            "name": "shipment_no",
+            "type": "int",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_type_id": {
+            "name": "shipment_type_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "status": {
+            "name": "status",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

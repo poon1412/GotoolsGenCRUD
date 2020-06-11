@@ -1,0 +1,20 @@
+package mockmodels
+
+{{LIB_IMPORT}}
+
+ 
+type {{MODULE_NAME}}MockForm struct {
+{{DATA_FORM}}
+}
+
+ 
+func (obj *{{MODULE_NAME}}MockForm) TableName() string {
+	return "{{TABLE_NAME}}"
+}
+
+func (obj *{{MODULE_NAME}}MockForm) GenFake() {
+	err:= faker.FakeData(obj)
+  	if err!= nil {
+    	fmt.Println(err)
+ 	} 
+}

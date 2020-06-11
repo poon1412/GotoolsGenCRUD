@@ -1,0 +1,64 @@
+{
+    "name": "shipment_schedule",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "shipment_schedule_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "shipment_schedule"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "delivery_date": {
+            "name": "delivery_date",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "pickup_date": {
+            "name": "pickup_date",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_id": {
+            "name": "shipment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "MUL",
+            "default": ""
+        },
+        "shipment_schedule_id": {
+            "name": "shipment_schedule_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "status": {
+            "name": "status",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        }
+    }
+}

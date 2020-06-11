@@ -1,0 +1,58 @@
+{
+    "name": "shipment_info",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "shipment_id",
+        "info_key"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "shipment_info"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "info_key": {
+            "name": "info_key",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "info_val": {
+            "name": "info_val",
+            "type": "text",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "shipment_id": {
+            "name": "shipment_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

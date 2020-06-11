@@ -1,0 +1,36 @@
+ 
+ // Update
+
+{{OPEN_INJECT}}
+type {{MODULE_NAME}}Update struct {
+	{{CTRL_DOT}}Response
+	Model models.{{MODULE_NAME}}Form     `json:"-"`
+	Param models.{{MODULE_NAME}}Form `json:"-"`
+	Dt    map[string]interface{} `json:"data,omitempty"`
+
+}
+
+func {{MODULE_NAME}}UpdateHandler(ctx iris.Context) {
+	Obj := {{MODULE_NAME}}Update{}
+	Obj.Response.Prepare(ctx, &Obj)
+	ctx.JSON(Obj)
+}
+
+func (Obj *{{MODULE_NAME}}Update) BeforeValidate(ctx iris.Context) {
+	{{UPDATE_KEY}}
+	Obj.Response.Param = &Obj.Param
+}
+
+func (Obj *{{MODULE_NAME}}Update) Prepare(ctx iris.Context) {
+	{{UPDATE_KEY_INIT}}
+	
+	if Obj.Model.Update({{CTRL_DOT}}ConvertFormValue(models.{{MODULE_NAME}}Form{}, ctx.FormValues())) {
+		Obj.Response.SetStatus("success")
+		Obj.Response.SetMsg("OK")
+	} else {
+		Obj.Response.SetStatus("fail")
+		Obj.Response.SetMsg("No Data.")
+	}
+
+}
+{{END_INJECT}}

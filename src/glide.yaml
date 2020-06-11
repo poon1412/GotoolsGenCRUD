@@ -1,0 +1,21 @@
+package: .
+import:
+- package: github.com/Masterminds/glide
+  subpackages:
+  - action
+  - cfg
+  - msg
+  - path
+- package: github.com/bmatcuk/doublestar
+- package: github.com/droundy/goopt
+- package: github.com/go-sql-driver/mysql
+- package: github.com/howeyc/gopass
+- package: github.com/jinzhu/gorm
+  subpackages:
+  - dialects/mysql
+- package: github.com/joho/godotenv
+- package: github.com/spf13/cobra
+testImport:
+- package: github.com/smartystreets/goconvey
+  subpackages:
+  - convey

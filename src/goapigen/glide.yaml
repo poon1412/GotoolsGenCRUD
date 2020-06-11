@@ -1,0 +1,5 @@
+package: goapigen
+import:
+- package: github.com/jinzhu/gorm
+  subpackages:
+  - dialects/mysql

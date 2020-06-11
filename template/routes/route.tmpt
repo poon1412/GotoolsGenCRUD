@@ -1,0 +1,15 @@
+package routes
+
+import (
+	"github.com/kataras/iris"{{IMPORT_ADDITION}}
+)
+
+func ConfigRoute(app *iris.Application) {
+
+	apiRoute := app.Party("/api")
+	{
+{{ROUTE}}
+	}
+
+	additionRoute(app)
+}

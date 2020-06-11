@@ -1,0 +1,9 @@
+
+// {{MODULE_NAME}} Update 
+	t.Log("Test {{MODULE_NAME}} Update")
+	CarrierUpdateStruct := mockmodels.CarrierMockForm{}
+	CarrierUpdateStruct.GenFake()
+	e.PUT(fmt.Sprintf("/api/{{MODULE_ROUTE}}{{ROUTE_URL_KEY}}"{{ROUTE_URL_VALUE}})).
+		{{FORM_FIELD}} 
+		WithHeader("Authorization", "Bearer "+TokenString).
+		Expect().Status(200)

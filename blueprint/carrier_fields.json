@@ -1,0 +1,57 @@
+{
+    "name": "carrier_fields",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "carrier_fields_id"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "carrier_fields"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "carrier_fields_id": {
+            "name": "carrier_fields_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "create_at": {
+            "name": "create_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        },
+        "is_require": {
+            "name": "is_require",
+            "type": "tinyint",
+            "nullable": "NO",
+            "key": "",
+            "default": ""
+        },
+        "meta_key": {
+            "name": "meta_key",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "UNI",
+            "default": ""
+        },
+        "update_at": {
+            "name": "update_at",
+            "type": "datetime",
+            "nullable": "NO",
+            "key": "",
+            "default": "CURRENT_TIMESTAMP"
+        }
+    }
+}

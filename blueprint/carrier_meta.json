@@ -1,0 +1,44 @@
+{
+    "name": "carrier_meta",
+    "mode": "CRUDL",
+    "injection_mode": "",
+    "unpublish_field": [],
+    "uneditable_field": [],
+    "filter_list": [],
+    "filter_detail": [],
+    "unique_key": [
+        "carrier_id",
+        "meta_key"
+    ],
+    "validator": {},
+    "cache_group_backend": [],
+    "cache_group_frontend": [
+        "carrier_meta"
+    ],
+    "cache_duration": 0,
+    "plugin": null,
+    "relation": {},
+    "columns": {
+        "carrier_id": {
+            "name": "carrier_id",
+            "type": "int",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "meta_key": {
+            "name": "meta_key",
+            "type": "varchar",
+            "nullable": "NO",
+            "key": "PRI",
+            "default": ""
+        },
+        "meta_val": {
+            "name": "meta_val",
+            "type": "text",
+            "nullable": "YES",
+            "key": "",
+            "default": ""
+        }
+    }
+}

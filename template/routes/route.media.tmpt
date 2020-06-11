@@ -1,0 +1,1 @@
+		apiRoute.Post("/{{MODULE_MEDIA_ROUTE}}", controllers.{{MODULE_NAME}}Handler)
